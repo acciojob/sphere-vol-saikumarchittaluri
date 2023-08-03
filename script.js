@@ -1,6 +1,7 @@
-// function volume_sphere() {}
+function volume_sphere(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
 
-function volume_sphere() {
   // Get the value of the radius input field
   const radius = document.getElementById("radius").value;
 
@@ -13,4 +14,7 @@ function volume_sphere() {
   }
 }
 
-window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+window.onload = function() {
+  const form = document.getElementById('MyForm');
+  form.onsubmit = volume_sphere;
+}
